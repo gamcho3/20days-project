@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Andika New Basic', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1498673394965-85cb14905c89?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color:#fff;
+    margin:0;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+body *{
+    z-index:1;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.container{
+    display: none;
+    flex-direction: column;
+}
+
+
+
+.countdown{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+
+.time{
+    text-align: center;
+    font-size:40px;
+}
+
+.time small{
+    color:blanchedalmond;
+}
+
+.year{
+    position: absolute;
+    font-size: 180px;
+    z-index: -1;
+    bottom:0;
+}
+
+.button-container{
+    width:100%;
+    padding:10px 15px;
+    background-color:dimgrey;
+    position: absolute;
+    top:0;
+    display: flex;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 2;
+    
+}
+
+.button-container.show{
+    transform: translateY(0);
+    
+}
+
+
+.btn{
+    font-size:15px;
+    padding:10px;
+    border: 0;
+    margin:0 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.menu{
+    position: absolute;
+    top:10px;
+    left:10px;
+    font-size:2rem;
+    color: #fff;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media(max-width:500px){
+h1{
+    font-size:40px;
+}
+.year{
+    font-size:100px;
+}
+.time{
+    font-size: 30px;
+}
+}
+
+img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+}
