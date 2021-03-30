@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&display=swap');
+
+:root{
+    --border-color:rgba(0,0,0,0.2);
+    --background-color:rgba(100,100,100,0.5);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kiwi Maru', serif;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height:100vh;
+    flex-direction: column;
+}
+
+.list-ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    border: 1px solid var(--border-color);
+    
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-top:20px;
+    background-color: #fff;
+
+}
+
+.list-ul li{
+    display: flex;
+    height:60px;
+}
+
+.list-ul li:not(:last-of-type){
+    border-bottom: 1px solid var(--border-color)
+}
+
+.list-ul li span{
+    padding:10px;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60px;
+    height:60px;
+    
+}
+
+.list-ul li.right .people p{
+    color:greenyellow;
+}
+
+.list-ul li.wrong .people p{
+    color:tomato;
+}
+
+.people{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding:10px 20px;
+    cursor: pointer;
+    
+}
+
+.people i{
+    margin-left: 15px;
+}
+
+.list-ul li.over .people{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.check{
+    margin:30px 0px 30px;
+    background-color: transparent;
+    border: none;
+    background-color: blueviolet;
+    color:#fff;
+    padding:7px 10px;
+    border-radius: 5px;
+}
+
+.alarm{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-500%);
+    padding:30px 40px;
+}
+
+.alarm.on{
+    transform: translate(-50%,-50%);
+    transition: transform 0.6s ease-out;
+}
+
+.alarm button{
+    margin-top:10px;
+    font-size:15px;
+    background-color:blanchedalmond;
+    border: 0;
+    padding:5px;
+}
